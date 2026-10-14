@@ -1,0 +1,39 @@
+/* AvaPlay Tizen TV - Design Tokens
+   Mirrors the Android TV app's Theme.kt (obsidian black, teal accent). */
+:root {
+  color-scheme: dark;
+  --avaplay-bg: #000000;
+  --avaplay-ground-top: #181c25;
+  --avaplay-ground-mid: #0d0f14;
+  --avaplay-ground-floor: #050507;
+  --avaplay-surface: #0e0e10;
+  --avaplay-surface-raised: #1a1a1d;
+  --avaplay-menu: #1a1e28;
+  --avaplay-outline: #3a3a3f;
+
+  --avaplay-accent: #2be0c8;
+  --avaplay-accent-soft: rgba(43, 224, 200, 0.16);
+  --avaplay-star: #ffc857;
+  --avaplay-live-indicator: #ff5c72;
+
+  --avaplay-text: #f5f5f6;
+  --avaplay-text-secondary: #c9c9ce;
+  --avaplay-text-muted: #8a8a92;
+  --avaplay-divider: #2a2a2e;
+
+  --avaplay-font-family: 'Roboto', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --avaplay-radius-card: 12px;
+  --avaplay-radius-dialog: 28px;
+  --avaplay-focus-ring: 3px solid var(--avaplay-accent);
+
+  /* Live TV geometry (1920x1080 canvas, taken from the Android TV capture) */
+  --lt-header-h: 132px;
+  --lt-side-x: 32px;
+  --lt-side-w: 440px;
+  --lt-stage-x-open: 538px;
+  --lt-stage-x-closed: 32px;
+  --lt-row-h: 78px;
+  --lt-info-w: 508px;   /* number + logo + name column in the guide */
+  --lt-px-per-30min: 320px;
+}

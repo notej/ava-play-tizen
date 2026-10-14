@@ -1,0 +1,20 @@
+{
+  "name": "avaplay-tizen",
+  "version": "1.0.0",
+  "description": "AvaPlay IPTV & Streaming Media Client for Samsung Tizen TV",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 3000",
+    "build": "vite build",
+    "package": "npm run build && mkdir -p builds && cd dist && zip -q -r ../builds/AvaPlay-1.0.0.wgt ./* && cd .. && echo 'Tizen .wgt package generated in builds/AvaPlay-1.0.0.wgt'",
+    "preview": "vite preview --host 0.0.0.0 --port 3000"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  },
+  "dependencies": {
+    "flag-icons": "^7.5.0",
+    "hls.js": "^1.7.3"
+  }
+}

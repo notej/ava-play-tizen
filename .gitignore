@@ -1,0 +1,12 @@
+node_modules/
+dist/
+builds/
+*.wgt
+.DS_Store
+._*
+# Certificates and logins never belong in the repository
+*.p12
+*.pfx
+*.jks
+*.keystore
+tv-debug/

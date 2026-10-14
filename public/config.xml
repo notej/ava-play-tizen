@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+        xmlns:tizen="http://tizen.org/ns/widgets" 
+        id="http://arda.avaplay/AvaPlayTizen" 
+        version="1.0.0" 
+        viewmodes="maximized">
+    <tizen:application id="AvaPlayTizen.AvaPlay" 
+                       exec="index.html" 
+                       entry="index.html" 
+                       type="web" 
+                       package="AvaPlayTizen" 
+                       ambient_support="disable"/>
+    <content src="index.html"/>
+
+    <!-- IPTV providers are cross-origin and often plain HTTP; the TV app must be allowed to call them -->
+    <access origin="*" subdomains="true"/>
+    
+    <!-- Lock target UI viewport to 1080p canvas for optimal VRAM usage (32-64MB budget) -->
+    <feature name="http://tizen.org/feature/screen.size.normal.1080.1920"/>
+    
+    <!-- Mandatory Tizen & Samsung Privileges -->
+    <tizen:privilege name="http://developer.samsung.com/privilege/avplay"/>
+    <tizen:privilege name="http://tizen.org/privilege/internet"/>
+    <tizen:privilege name="http://tizen.org/privilege/network.public"/>
+    <tizen:privilege name="http://tizen.org/privilege/tv.inputdevice"/>
+    <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
+
+    <!-- Hardware Acceleration & Video Overlay Settings -->
+    <tizen:setting screen-orientation="landscape" 
+                   context-menu="disable" 
+                   background-support="disable" 
+                   encryption="disable" 
+                   install-location="auto" 
+                   hw-acceleration="enable"/>
+
+    <name>AvaPlay</name>
+    <description>Netflix-grade IPTV and streaming media player for Samsung Tizen TV</description>
+    <author href="http://arda.avaplay" email="support@avaplay.tv">AvaPlay Engineering</author>
+    <icon src="icon.png"/>
+</widget>
